@@ -5,17 +5,17 @@
     "main.js.map": "/embed-testbed/static/js/main.edcd721a.chunk.js.map",
     "runtime-main.js": "/embed-testbed/static/js/runtime-main.fbfb76e5.js",
     "runtime-main.js.map": "/embed-testbed/static/js/runtime-main.fbfb76e5.js.map",
-    "static/js/2.fafecd78.chunk.js": "/embed-testbed/static/js/2.fafecd78.chunk.js",
-    "static/js/2.fafecd78.chunk.js.map": "/embed-testbed/static/js/2.fafecd78.chunk.js.map",
+    "static/js/2.b0f927d2.chunk.js": "/embed-testbed/static/js/2.b0f927d2.chunk.js",
+    "static/js/2.b0f927d2.chunk.js.map": "/embed-testbed/static/js/2.b0f927d2.chunk.js.map",
     "static/js/3.d0ef78cd.chunk.js": "/embed-testbed/static/js/3.d0ef78cd.chunk.js",
     "static/js/3.d0ef78cd.chunk.js.map": "/embed-testbed/static/js/3.d0ef78cd.chunk.js.map",
     "index.html": "/embed-testbed/index.html",
     "static/css/main.3522f992.chunk.css.map": "/embed-testbed/static/css/main.3522f992.chunk.css.map",
-    "static/js/2.fafecd78.chunk.js.LICENSE.txt": "/embed-testbed/static/js/2.fafecd78.chunk.js.LICENSE.txt"
+    "static/js/2.b0f927d2.chunk.js.LICENSE.txt": "/embed-testbed/static/js/2.b0f927d2.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.fbfb76e5.js",
-    "static/js/2.fafecd78.chunk.js",
+    "static/js/2.b0f927d2.chunk.js",
     "static/css/main.3522f992.chunk.css",
     "static/js/main.edcd721a.chunk.js"
   ]
