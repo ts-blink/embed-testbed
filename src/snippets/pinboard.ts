@@ -1,11 +1,11 @@
 export default `
-const { init, SearchEmbed } = TsEmbedSdk;
+const { init, PinboardEmbed } = TsEmbedSdk;
 init({
     thoughtSpotHost: '<%=tshost%>',
     authType: 'None'
 });
 
-const searchEmbed = new SearchEmbed(
+const vizEmbed = new PinboardEmbed(
     document.getElementById('ts-embed'), 
     {
         frameParams: {
@@ -14,5 +14,7 @@ const searchEmbed = new SearchEmbed(
         }
     });
 
-searchEmbed.render({});
+vizEmbed.render({
+    pinboardId: '<%=pinboardid%>'
+});
 `;
