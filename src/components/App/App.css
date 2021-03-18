@@ -21,7 +21,6 @@
     align-items: center;
     justify-content: center;
     font-size: 18px;
-    /* font-size: calc(10px + 2vmin); */
     color: white;
 }
 
@@ -129,6 +128,15 @@ ul.navUL li a:hover {
 .dropdown-content div:hover {
     background-color: #a5acb9;
     border: 0;
+    cursor: pointer;
+}
+
+.active-menu {
+    color: white;
+}
+
+.active-menu-item {
+    background-color: #a5acb9;
 }
 
 .dropdown-content a {

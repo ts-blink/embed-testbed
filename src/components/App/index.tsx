@@ -37,7 +37,7 @@ const App = () => {
 
     return (
         <div className="App">
-            <Header setPageId={setPageId} />
+            <Header setPageId={setPageId} pageId={pageId} />
             <div className="container">
                 <Playground pageId={pageId} params={getParams()} />
                 <Preview />

@@ -1,7 +1,9 @@
 import React from 'react';
+import { generatePageId, getSelectedTitle } from '../../utils/index';
 
 const DropdownComponent = (props: {
     title: string;
+    pageId: string;
     menuItems: string[];
     otherTitles: string[];
     onClickMenu: Function;
@@ -21,19 +23,21 @@ const DropdownComponent = (props: {
     };
 
     const onClickHandeler = (item: string) => {
-        const page = props.onClickMenu(
-            `${props.title.toLowerCase()}-${item
-                .split(' ')
-                .join('-')
-                .toLowerCase()}`,
-        );
-
+        const page = props.onClickMenu(generatePageId(props.title, item));
         onClickButton();
     };
 
     return (
         <div className="dropdown">
-            <a className="dropbtn" onClick={onClickButton} href="#">
+            <a
+                className={`dropbtn ${
+                    getSelectedTitle(props.pageId) === props.title.toLowerCase()
+                        ? 'active-menu'
+                        : ''
+                }`}
+                onClick={onClickButton}
+                href="#"
+            >
                 {props.title}
             </a>
             <div
@@ -41,7 +45,14 @@ const DropdownComponent = (props: {
                 id={`dropdown-container-${props.title}`}
             >
                 {props.menuItems.map((item, index) => (
-                    <div key={item + index}>
+                    <div
+                        key={item + index}
+                        className={`${
+                            props.pageId === generatePageId(props.title, item)
+                                ? 'active-menu-item'
+                                : ''
+                        }`}
+                    >
                         <a onClick={() => onClickHandeler(item)}>{item}</a>
                     </div>
                 ))}
