@@ -1,0 +1,170 @@
+.App {
+    text-align: center;
+}
+
+.App-logo {
+    height: 40vmin;
+    pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+        animation: App-logo-spin infinite 20s linear;
+    }
+}
+
+.App-header {
+    background-color: #282c34;
+    min-height: 10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    /* font-size: calc(10px + 2vmin); */
+    color: white;
+}
+
+.show-menu {
+    cursor: pointer;
+}
+
+input.checkbox-menu[type='checkbox'] {
+    display: none;
+    -webkit-appearance: none;
+}
+
+input.checkbox-menu[type='checkbox']:checked ~ div.menu-block {
+    opacity: 1;
+    visibility: visible;
+}
+
+nav {
+    color: #fff;
+    position: absolute;
+    left: 0;
+}
+
+.nav-icon {
+    display: inline-block;
+    font-size: 1.5em;
+    padding: 0.5em;
+    vertical-align: middle;
+    color: #e5e5e5;
+}
+
+.menu-block {
+    display: inline-block;
+    opacity: 0;
+    vertical-align: middle;
+    visibility: hidden;
+    -webkit-transition: all 0.25s;
+    -moz-transition: all 0.25s;
+    -ms-transition: all 0.25s;
+    -o-transition: all 0.25s;
+    transition: all 0.25s;
+}
+
+ul.navUL {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul.navUL li {
+    display: inline-block;
+    padding: 0px 5px;
+}
+
+ul.navUL li a {
+    color: #c2c2c2;
+    display: block;
+    padding: 3px;
+    text-decoration: none;
+}
+
+ul.navUL li a:hover {
+    color: #888;
+    text-decoration: none;
+}
+
+@keyframes App-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.container {
+    display: flex;
+}
+
+.dropbtn {
+    color: #c2c2c2;
+    display: block;
+    padding: 3px 15px;
+    text-decoration: none;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    max-height: 50vh;
+    overflow-y: auto;
+    top: 50px;
+    left: -16px;
+}
+
+.dropdown-content div:hover {
+    background-color: #a5acb9;
+    border: 0;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+}
+
+.display-block {
+    display: block;
+}
+
+.title {
+    display: none;
+}
+
+/*Scrollbar styling start*/
+::-webkit-scrollbar {
+    width: 0.3em;
+}
+
+::-webkit-scrollbar {
+    height: 0.4em;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #a5acb9;
+    outline: none;
+    border-radius: 4px;
+}
+
+/* Scrollbar styling end*/
