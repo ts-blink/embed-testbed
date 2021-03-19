@@ -22,7 +22,7 @@ import answerId from '../../snippets/search/answerId';
 import searchAuthInitEvent from '../../snippets/search/authInitEvent';
 import collapse from '../../snippets/search/collapseDataPanel';
 import searchDataEvent from '../../snippets/search/dataEvent';
-import disableActionReason from '../../snippets/search/disableActionReason';
+import disableActionWithComment from '../../snippets/search/disableActionWithComment';
 import disableActions from '../../snippets/search/disableActions';
 import enable from '../../snippets/search/enableSearchAssist';
 import searchFrameParams from '../../snippets/search/frameParams';
@@ -72,13 +72,12 @@ export enum Page {
     Search7 = 'search-without-answer-id',
     Search8 = 'search-auth-init-event',
     Search9 = 'search-data-event',
-    Search10 = 'search-disable-action-reason',
-    Search11 = 'search-disable-actions',
-    Search12 = 'search-frame-params',
-    Search13 = 'search-hidden-actions',
-    Search14 = 'search-init-event',
-    Search15 = 'search-load-event',
-    Search16 = 'search-search-query',
+    Search10 = 'search-disable-action-with-reason',
+    Search11 = 'search-frame-params',
+    Search12 = 'search-hidden-actions',
+    Search13 = 'search-init-event',
+    Search14 = 'search-load-event',
+    Search15 = 'search-search-query',
 
     Visualization1 = 'visualization-modify-available-actions',
     Visualization2 = 'visualization-set-runtime-filters',
@@ -117,13 +116,12 @@ const snippetMap = {
     [Page.Search7]: answerId,
     [Page.Search8]: searchAuthInitEvent,
     [Page.Search9]: searchDataEvent,
-    [Page.Search10]: disableActionReason,
-    [Page.Search11]: disableActions,
-    [Page.Search12]: searchFrameParams,
-    [Page.Search13]: hiddenActions,
-    [Page.Search14]: searchInitEvent,
-    [Page.Search15]: searchLoadEvent,
-    [Page.Search16]: searchQuery,
+    [Page.Search10]: disableActionWithComment,
+    [Page.Search11]: searchFrameParams,
+    [Page.Search12]: hiddenActions,
+    [Page.Search13]: searchInitEvent,
+    [Page.Search14]: searchLoadEvent,
+    [Page.Search15]: searchQuery,
 
     [Page.Visualization1]: visualizationModifyAvailableActions,
     [Page.Visualization2]: visualizationSetRuntimeFilters,

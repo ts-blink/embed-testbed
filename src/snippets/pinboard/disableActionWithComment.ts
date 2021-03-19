@@ -18,6 +18,9 @@ init({
 // Instantiate class for embedding a pinboard
 const embed = new PinboardEmbed('#embed', {
 	frameParams: {},
+	disabledActions: ['downloadAsPdf'],
+	disabledActionReason: 'Reason for disabling',
+	hiddenActions: [],
 });
 
 try {
@@ -29,7 +32,6 @@ try {
 		// Render pinboard with UUID
 		.render({
 			pinboardId: 'e0836cad-4fdf-42d4-bd97-567a6b2a6058',
-			runtimeFilters: [],
 		});
 } catch (error) {
 	showNoDataImage();
