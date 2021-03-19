@@ -9,6 +9,7 @@ import fullAppAuthInit from '../../snippets/fullApp/authInitEvent';
 import fullAppFrameParams from '../../snippets/fullApp/frameParams';
 import fullAppInit from '../../snippets/fullApp/initEvent';
 import fullAppLoadEvent from '../../snippets/fullApp/loadEvent';
+import showPrimaryNavbar from '../../snippets/fullApp/showPrimaryNavbar';
 
 import pinboardModifyAvailableAction from '../../snippets/pinboard/modifyAvailableAction';
 import pinboardSetRuntimeFilters from '../../snippets/pinboard/setRuntimeFilters';
@@ -17,13 +18,15 @@ import pinboardAuthInit from '../../snippets/pinboard/authInitEvent';
 import pinboardFrameParams from '../../snippets/pinboard/frameParams';
 import pinboardInit from '../../snippets/pinboard/initEvent';
 import pinboardLoadEvent from '../../snippets/pinboard/loadEvent';
+import pinboardDisableActionWithComment from '../../snippets/pinboard/disableActionWithComment';
+import fullHeight from '../../snippets/pinboard/fullHeight';
+import pinboardHiddenActions from '../../snippets/pinboard/hiddenActions';
 
 import answerId from '../../snippets/search/answerId';
 import searchAuthInitEvent from '../../snippets/search/authInitEvent';
 import collapse from '../../snippets/search/collapseDataPanel';
 import searchDataEvent from '../../snippets/search/dataEvent';
 import disableActionWithComment from '../../snippets/search/disableActionWithComment';
-import disableActions from '../../snippets/search/disableActions';
 import enable from '../../snippets/search/enableSearchAssist';
 import searchFrameParams from '../../snippets/search/frameParams';
 import hiddenActions from '../../snippets/search/hiddenActions';
@@ -43,6 +46,8 @@ import visualizationDataEvent from '../../snippets/visualization/dataEvent';
 import visualizationFrameParams from '../../snippets/visualization/frameParams';
 import visualizationInit from '../../snippets/visualization/initEvent';
 import visualizationLoadEvent from '../../snippets/visualization/loadEvent';
+import visualizationDisableActionWithComment from '../../snippets/visualization/disableActionWithComment';
+import visualizationHiddenActions from '../../snippets/visualization/hiddenActions';
 import './playground.css';
 
 export enum Page {
@@ -54,6 +59,7 @@ export enum Page {
     FullApp6 = 'fullapp-frame-params',
     FullApp7 = 'fullapp-init-event',
     FullApp8 = 'fullapp-load-event',
+    FullApp9 = 'fullapp-show-primary-navbar',
 
     Pinboard1 = 'pinboard-modify-available-action',
     Pinboard2 = 'pinboard-set-runtime-filters',
@@ -62,6 +68,9 @@ export enum Page {
     Pinboard5 = 'pinboard-frame-params',
     Pinboard6 = 'pinboard-init-event',
     Pinboard7 = 'pinboard-load-event',
+    Pinboard8 = 'pinboard-disable-action-with-comment',
+    Pinboard9 = 'pinboard-full-height',
+    Pinboard10 = 'pinboard-hidden-actions',
 
     Search1 = 'search-collapse-data-panel',
     Search2 = 'search-enable-search-assist',
@@ -69,10 +78,10 @@ export enum Page {
     Search4 = 'search-hide-data-panels',
     Search5 = 'search-modify-available-action',
     Search6 = 'search-without-user-experience-customization',
-    Search7 = 'search-without-answer-id',
+    Search7 = 'search-answer-id',
     Search8 = 'search-auth-init-event',
     Search9 = 'search-data-event',
-    Search10 = 'search-disable-action-with-reason',
+    Search10 = 'search-disable-action-with-comment',
     Search11 = 'search-frame-params',
     Search12 = 'search-hidden-actions',
     Search13 = 'search-init-event',
@@ -87,6 +96,8 @@ export enum Page {
     Visualization6 = 'visualization-frame-params',
     Visualization7 = 'visualization-init-event',
     Visualization8 = 'visualization-load-event',
+    Visualization9 = 'visualization-disable-action-with-comment',
+    Visualization10 = 'visualization-hidden-actions',
 }
 
 const snippetMap = {
@@ -98,6 +109,7 @@ const snippetMap = {
     [Page.FullApp6]: fullAppFrameParams,
     [Page.FullApp7]: fullAppInit,
     [Page.FullApp8]: fullAppLoadEvent,
+    [Page.FullApp9]: showPrimaryNavbar,
 
     [Page.Pinboard1]: pinboardModifyAvailableAction,
     [Page.Pinboard2]: pinboardSetRuntimeFilters,
@@ -106,6 +118,9 @@ const snippetMap = {
     [Page.Pinboard5]: pinboardFrameParams,
     [Page.Pinboard6]: pinboardInit,
     [Page.Pinboard7]: pinboardLoadEvent,
+    [Page.Pinboard8]: pinboardDisableActionWithComment,
+    [Page.Pinboard9]: fullHeight,
+    [Page.Pinboard10]: pinboardHiddenActions,
 
     [Page.Search1]: collapse,
     [Page.Search2]: enable,
@@ -131,6 +146,8 @@ const snippetMap = {
     [Page.Visualization6]: visualizationFrameParams,
     [Page.Visualization7]: visualizationInit,
     [Page.Visualization8]: visualizationLoadEvent,
+    [Page.Visualization9]: visualizationDisableActionWithComment,
+    [Page.Visualization10]: visualizationHiddenActions,
 };
 
 type Params = { [key: string]: string };
