@@ -15,10 +15,7 @@ init({
 });
 // Instantiate class for embedding a pinboard
 const embed = new AppEmbed('#embed', {
-	frameParams: {
-		width: 1280,
-		height: 720,
-	},
+	frameParams: {},
 	showPrimaryNavbar: true,
 });
 embed

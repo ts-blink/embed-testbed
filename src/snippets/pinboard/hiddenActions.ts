@@ -18,9 +18,7 @@ init({
 // Instantiate class for embedding a pinboard
 const embed = new PinboardEmbed('#embed', {
 	frameParams: {},
-	disabledActions: [],
-	disabledActionReason: 'Reason for disabling',
-	hiddenActions: [],
+	hiddenActions: ['downloadAsPdf'],
 });
 
 try {

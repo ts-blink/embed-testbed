@@ -16,13 +16,14 @@ init({
 // Instantiate class for embedding a pinboard
 const embed = new AppEmbed('#embed', {
 	frameParams: {},
+	showPrimaryNavbar: false,
 });
 embed
 	// Register event listeners
 	.on('init', showLoader)
 	.on('load', hideLoader)
 	.render({
-		pageId: 'pinboards',
+		pageId: 'answers',
 	});
 // Functions to show and hide a loader while iframe loads
 function showLoader() {
