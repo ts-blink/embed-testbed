@@ -12,6 +12,8 @@ import fullAppLoadEvent from '../../snippets/fullApp/loadEvent';
 import showPrimaryNavbar from '../../snippets/fullApp/showPrimaryNavbar';
 import fullAppSetRuntimeFilters from '../../snippets/fullApp/setRuntimeFilters';
 import path from '../../snippets/fullApp/path';
+import fullAppDisableActionWithComment from '../../snippets/fullApp/disableActionWithComment';
+import fullAppHiddenActions from '../../snippets/fullApp/hiddenActions';
 
 import pinboardModifyAvailableAction from '../../snippets/pinboard/modifyAvailableAction';
 import pinboardSetRuntimeFilters from '../../snippets/pinboard/setRuntimeFilters';
@@ -23,6 +25,7 @@ import pinboardLoadEvent from '../../snippets/pinboard/loadEvent';
 import pinboardDisableActionWithComment from '../../snippets/pinboard/disableActionWithComment';
 import fullHeight from '../../snippets/pinboard/fullHeight';
 import pinboardHiddenActions from '../../snippets/pinboard/hiddenActions';
+import pinboardEnableVizTransformations from '../../snippets/pinboard/enableVizTransformations';
 
 import answerId from '../../snippets/search/answerId';
 import searchAuthInitEvent from '../../snippets/search/authInitEvent';
@@ -51,6 +54,7 @@ import visualizationInit from '../../snippets/visualization/initEvent';
 import visualizationLoadEvent from '../../snippets/visualization/loadEvent';
 import visualizationDisableActionWithComment from '../../snippets/visualization/disableActionWithComment';
 import visualizationHiddenActions from '../../snippets/visualization/hiddenActions';
+import visualizationEnableVizTransformations from '../../snippets/visualization/enableVizTransformations';
 import './playground.css';
 
 export enum Page {
@@ -65,6 +69,8 @@ export enum Page {
     FullApp9 = 'fullapp-show-primary-navbar',
     FullApp10 = 'fullapp-set-runtime-filters',
     FullApp11 = 'fullapp-path',
+    FullApp12 = 'fullapp-disable-action-with-comment',
+    FullApp13 = 'fullapp-hidden-actions',
 
     Pinboard1 = 'pinboard-modify-available-action',
     Pinboard2 = 'pinboard-set-runtime-filters',
@@ -76,6 +82,7 @@ export enum Page {
     Pinboard8 = 'pinboard-disable-action-with-comment',
     Pinboard9 = 'pinboard-full-height',
     Pinboard10 = 'pinboard-hidden-actions',
+    Pinboard11 = 'pinboard-enable-viz-transformations',
 
     Search1 = 'search-collapse-data-panel',
     Search2 = 'search-enable-search-assist',
@@ -104,6 +111,7 @@ export enum Page {
     Visualization8 = 'visualization-load-event',
     Visualization9 = 'visualization-disable-action-with-comment',
     Visualization10 = 'visualization-hidden-actions',
+    Visualization11 = 'visualization-enable-viz-transformations',
 }
 
 const snippetMap = {
@@ -118,6 +126,8 @@ const snippetMap = {
     [Page.FullApp9]: showPrimaryNavbar,
     [Page.FullApp10]: fullAppSetRuntimeFilters,
     [Page.FullApp11]: path,
+    [Page.FullApp12]: fullAppDisableActionWithComment,
+    [Page.FullApp13]: fullAppHiddenActions,
 
     [Page.Pinboard1]: pinboardModifyAvailableAction,
     [Page.Pinboard2]: pinboardSetRuntimeFilters,
@@ -129,6 +139,7 @@ const snippetMap = {
     [Page.Pinboard8]: pinboardDisableActionWithComment,
     [Page.Pinboard9]: fullHeight,
     [Page.Pinboard10]: pinboardHiddenActions,
+    [Page.Pinboard11]: pinboardEnableVizTransformations,
 
     [Page.Search1]: collapse,
     [Page.Search2]: enable,
@@ -157,6 +168,7 @@ const snippetMap = {
     [Page.Visualization8]: visualizationLoadEvent,
     [Page.Visualization9]: visualizationDisableActionWithComment,
     [Page.Visualization10]: visualizationHiddenActions,
+    [Page.Visualization11]: visualizationEnableVizTransformations,
 };
 
 type Params = { [key: string]: string };
