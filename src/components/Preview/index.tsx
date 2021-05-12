@@ -2,7 +2,7 @@ import './preview.css';
 
 const Preview = () => (
     <div className="preview">
-        <div id="ts-embed" />
+        <div id="embed" />
     </div>
 );
 

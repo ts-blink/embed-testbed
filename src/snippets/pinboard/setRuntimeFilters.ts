@@ -39,10 +39,10 @@ embed
     .render();
 // Functions to show and hide a loader while iframe loads
 function showLoader() {
-    document.getElementById('loader').style.display = 'block';
+    // document.getElementById('loader').style.display = 'block';
 }
 function hideLoader() {
-    document.getElementById('loader').style.display = 'none';
+    // document.getElementById('loader').style.display = 'none';
 }
 // Functions to show or hide No data images
 function showNoDataImage() {

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import Playground, { Page } from '../Playground';
+import Playground from '../Playground';
+import { Page } from '../Playground/snippets';
 import Preview from '../Preview';
 import Header from '../Header';
 import './App.css';
