@@ -1,6 +1,6 @@
 export default `
 // Import packages
-import "./styles.css";
+import './styles.css';
 import {
     init,
     SearchEmbed,
@@ -21,22 +21,24 @@ const tsSearch = new SearchEmbed("#embed", {
 tsSearch
     // Register event handlers
     .on("init", showLoader)
-    .on("load", hideLoader) /param-end-customActionHandle/
+    .on("load", hideLoader)
     .on("answerPageLoading", payload =>
         console.log("message received from embedded view" + JSON.stringify(payload))
     )
     // Render the embedded search and pass in the data source id
     .render();
+
 setTimeout(() => {
     tsSearch.trigger(HostEvent.Search, {
-        searchQuery: "customer income"
+        searchQuery: "Customer_Zip"
     });
-}, 15000);
+}, 10000);
+
 // Show/hide a loader while iframe is loading
 function showLoader() {
-    document.getElementById("loader").style.display = "block";
+    // document.getElementById("loader").style.display = "block";
 }
 function hideLoader() {
-    document.getElementById("loader").style.display = "none";
+    // document.getElementById("loader").style.display = "none";
 }
 `;

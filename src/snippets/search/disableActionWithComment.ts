@@ -7,7 +7,7 @@ import {
 	Action,
 	EventType,
 	AuthType,
-} from '@thoughtspot/embed-sdk';
+} from '@thoughtspot/visual-embed-sdk';
 
 // Write Javascript code!
 init({
@@ -18,9 +18,9 @@ init({
 // Instantiate SearchEmbed class
 const tsSearch = new SearchEmbed('#embed', {
 	frameParams: {},
-	disableAction: true
-	disableActions: ['downloadAsPdf']
-	disableActionReason: ['Not available']
+	disableAction: true,
+	disableActions: [Action.DownloadAsPdf],
+	disableActionReason: ['Not available'],
 });
 
 tsSearch
@@ -33,7 +33,7 @@ tsSearch
 		)
 	)
 	// Render the embedded search and pass in the data source id
-	.render({});
+	.render();
 
 // Show/hide a loader while iframe is loading
 function showLoader() {

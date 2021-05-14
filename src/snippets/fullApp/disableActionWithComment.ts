@@ -12,6 +12,7 @@ import "./styles.css";
 // Initialize embed configuration
 init({
     thoughtSpotHost: '<%=tshost%>',
+	showPrimaryNavbar: true,
     authType: AuthType.None
 });
 // Instantiate class for embedding a pinboard

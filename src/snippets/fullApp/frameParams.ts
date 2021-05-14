@@ -6,7 +6,7 @@ import {
 	Action,
 	EventType,
 	AuthType,
-} from '@thoughtspot/embed-sdk';
+} from '@thoughtspot/visual-embed-sdk';
 import './styles.css';
 // Initialize embed configuration
 init({
@@ -19,14 +19,13 @@ const embed = new AppEmbed('#embed', {
 		width: 1280,
 		height: 720,
 	},
+	showPrimaryNavbar: true,
 });
 embed
 	// Register event listeners
 	.on('init', showLoader)
 	.on('load', hideLoader)
-	.render({
-		pageId: 'answers',
-	});
+	.render();
 // Functions to show and hide a loader while iframe loads
 function showLoader() {
 	// document.getElementById('loader').style.display = 'block';

@@ -46,9 +46,9 @@ function hideLoader() {
 }
 // Functions to show or hide No data images
 function showNoDataImage() {
-    document.getElementById('no-data').style.display = 'block';
+    // document.getElementById('no-data').style.display = 'block';
 }
 function hideNoDataImage() {
-    document.getElementById('no-data').style.display = 'none';
+    // document.getElementById('no-data').style.display = 'none';
 }
 `;

@@ -7,7 +7,7 @@ import {
 	Action,
 	EventType,
 	AuthType,
-} from '@thoughtspot/embed-sdk';
+} from '@thoughtspot/visual-embed-sdk';
 
 // Write Javascript code!
 init({
@@ -18,9 +18,7 @@ init({
 // Instantiate SearchEmbed class
 const tsSearch = new SearchEmbed('#embed', {
 	frameParams: {},
-	disabledActions: [],
-	disabledActionReason: 'Reason for disabling',
-	hiddenActions: [],
+	dataSources: ['b664a50a-a46d-4f69-a985-96f1e3b6988d'],
 });
 
 tsSearch
@@ -33,9 +31,7 @@ tsSearch
 		)
 	)
 	// Render the embedded search and pass in the data source id
-	.render({
-		dataSources: ['b664a50a-a46d-4f69-a985-96f1e3b6988d'],
-	});
+	.render();
 
 // Show/hide a loader while iframe is loading
 function showLoader() {

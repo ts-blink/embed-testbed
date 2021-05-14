@@ -13,7 +13,6 @@ type Params = { [key: string]: string };
 const compileSnippet = (template: string, params: Params) => {
     let str = template;
     for (let key in params) {
-        console.log(key);
         const val = params[key];
         str = str.replace(new RegExp(`<%=${key}%>`, 'gi'), val);
     }
@@ -47,10 +46,10 @@ const Playground = ({ pageId, params }: PlaygroundProps) => {
 
     const executeCode = () => {
         // @ts-ignore
-        const code = editorRef.current.getValue();
+        const code = customizeTestBedContent(editorRef.current.getValue());
         try {
             resetPreview();
-            eval(customizeTestBedContent(code));
+            eval(code);
         } catch (e) {
             console.log(e);
         }

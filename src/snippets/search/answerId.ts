@@ -7,7 +7,7 @@ import {
 	Action,
 	EventType,
 	AuthType,
-} from '@thoughtspot/embed-sdk';
+} from '@thoughtspot/visual-embed-sdk';
 
 // Write Javascript code!
 init({
@@ -19,6 +19,7 @@ init({
 const tsSearch = new SearchEmbed('#embed', {
 	frameParams: {},
 	enableSearchAssist: true,
+	answerId: "d0e16150-6a70-4c6c-8b4b-0afc4915d752",
 });
 
 tsSearch
@@ -31,10 +32,7 @@ tsSearch
 		)
 	)
 	// Render the embedded search and pass in the data source id
-	.render({
-		dataSources: ['b664a50a-a46d-4f69-a985-96f1e3b6988d'],
-		answerId: "5772aaf1-555d-44c4-a24c-ae6fba6684c3",
-	});
+	.render();
 
 // Show/hide a loader while iframe is loading
 function showLoader() {

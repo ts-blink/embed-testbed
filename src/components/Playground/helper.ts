@@ -1,6 +1,6 @@
 export const customizeTestBedContent = (template: string) => {
     const inportSDKRegex = new RegExp(
-        /import {[^}]*}.*(?=('|")@thoughtspot\/embed-sdk('|")).*/,
+        /import {[^}]*}.*(?=('|")@thoughtspot\/visual-embed-sdk('|")).*/,
         'ig',
     );
     const tsImportArr = template.match(inportSDKRegex);
@@ -10,7 +10,7 @@ export const customizeTestBedContent = (template: string) => {
             const inportRegex = new RegExp(/import/, 'ig');
             const fromRegex = new RegExp(/from/, 'ig');
             const sdkNameRegex = new RegExp(
-                /('|")@thoughtspot\/embed-sdk('|")/,
+                /('|")@thoughtspot\/visual-embed-sdk('|")/,
                 'ig',
             );
             tsImportString = tsImportString
@@ -20,6 +20,6 @@ export const customizeTestBedContent = (template: string) => {
             template = template.replace(inportSDKRegex, tsImportString);
         }
     }
-    const styleRegex = new RegExp(/import *('|")\.\/styles.css('|")/, 'ig');
+    const styleRegex = new RegExp(/import *('|")\.\/styles.css('|");?/, 'ig');
     return template.replace(styleRegex, '');
 };

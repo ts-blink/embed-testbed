@@ -6,7 +6,7 @@ import {
 	Action,
 	EventType,
 	AuthType,
-} from '@thoughtspot/embed-sdk';
+} from '@thoughtspot/visual-embed-sdk';
 import './styles.css';
 
 // Initialize embed configuration
@@ -18,6 +18,7 @@ init({
 // Instantiate class for embedding a pinboard
 const embed = new PinboardEmbed('#embed', {
 	frameParams: {},
+	pinboardId: 'e0836cad-4fdf-42d4-bd97-567a6b2a6058',
 });
 
 try {
@@ -32,9 +33,7 @@ try {
 			)
 		)
 		// Render pinboard with UUID
-		.render({
-			pinboardId: 'e0836cad-4fdf-42d4-bd97-567a6b2a6058',
-		});
+		.render();
 } catch (error) {
 	showNoDataImage();
 	hideLoader();
@@ -52,9 +51,9 @@ function hideLoader() {
 // Functions to show or hide No data images
 
 function showNoDataImage() {
-	document.getElementById('no-data').style.display = 'block';
+	// document.getElementById('no-data').style.display = 'block';
 }
 function hideNoDataImage() {
-	document.getElementById('no-data').style.display = 'none';
+	// document.getElementById('no-data').style.display = 'none';
 }
 `;
