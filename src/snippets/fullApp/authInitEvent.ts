@@ -32,9 +32,7 @@ embed
 	.render();
 // Functions to show and hide a loader while iframe loads
 function showLoader() {
-	// document.getElementById('loader').style.display = 'block';
 }
 function hideLoader() {
-	// document.getElementById('loader').style.display = 'none';
 }
 `;
