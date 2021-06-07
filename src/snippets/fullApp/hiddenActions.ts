@@ -6,9 +6,10 @@ import {
     Action,
     RuntimeFilterOp,
     EmbedEvent,
+    Page,
     AuthType
 } from "@thoughtspot/visual-embed-sdk";
-import "./styles.css";
+import './styles.css';
 // Initialize embed configuration
 init({
     thoughtSpotHost: '<%=tshost%>',
@@ -17,7 +18,8 @@ init({
 // Instantiate class for embedding a pinboard
 const embed = new AppEmbed("#embed", {
     frameParams: {},
-    pageId: "home",
+    pageId: Page.Home,
+	showPrimaryNavbar: true,
     hiddenActions: [Action.DownloadAsPdf],
 });
 embed
@@ -27,9 +29,7 @@ embed
     .render();
 // Functions to show and hide a loader while iframe loads
 function showLoader() {
-    document.getElementById("loader").style.display = "block";
 }
 function hideLoader() {
-    document.getElementById("loader").style.display = "none";
 }
 `;

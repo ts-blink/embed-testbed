@@ -8,7 +8,7 @@ import {
     AuthType,
 RuntimeFilterOp,
 } from "@thoughtspot/visual-embed-sdk";
-import "./styles.css";
+import './styles.css';
 // Initialize embed configuration
 init({
     thoughtSpotHost: '<%=tshost%>',
@@ -22,6 +22,7 @@ const embed = new AppEmbed("#embed", {
         operator: RuntimeFilterOp.EQ,
         values: [ 'tsadmin' ]
     }],
+	showPrimaryNavbar: true,
     pageId: "pinboards",
 });
 embed
@@ -31,9 +32,7 @@ embed
     .render();
 // Functions to show and hide a loader while iframe loads
 function showLoader() {
-    document.getElementById("loader").style.display = "block";
 }
 function hideLoader() {
-    document.getElementById("loader").style.display = "none";
 }
 `;

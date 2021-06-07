@@ -14,5 +14,5 @@ const searchEmbed = new SearchEmbed(
         }
     });
 
-searchEmbed.render({});
+searchEmbed.render();
 `;

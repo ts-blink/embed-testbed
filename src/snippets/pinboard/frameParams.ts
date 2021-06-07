@@ -6,7 +6,7 @@ import {
 	Action,
 	EventType,
 	AuthType,
-} from '@thoughtspot/embed-sdk';
+} from '@thoughtspot/visual-embed-sdk';
 import './styles.css';
 
 // Initialize embed configuration
@@ -21,6 +21,7 @@ const embed = new PinboardEmbed('#embed', {
 		width: 1280,
 		height: 720,
 	},
+	pinboardId: 'e0836cad-4fdf-42d4-bd97-567a6b2a6058',
 });
 
 try {
@@ -30,9 +31,7 @@ try {
 		.on('init', showLoader)
 		.on('load', hideLoader)
 		// Render pinboard with UUID
-		.render({
-			pinboardId: 'e0836cad-4fdf-42d4-bd97-567a6b2a6058',
-		});
+		.render();
 } catch (error) {
 	showNoDataImage();
 	hideLoader();
@@ -40,19 +39,15 @@ try {
 
 // Functions to show and hide a loader while iframe loads
 function showLoader() {
-	document.getElementById('loader').style.display = 'block';
 }
 
 function hideLoader() {
-	document.getElementById('loader').style.display = 'none';
 }
 
 // Functions to show or hide No data images
 
 function showNoDataImage() {
-	document.getElementById('no-data').style.display = 'block';
 }
 function hideNoDataImage() {
-	document.getElementById('no-data').style.display = 'none';
 }
 `;

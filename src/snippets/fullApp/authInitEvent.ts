@@ -5,8 +5,9 @@ import {
 	AppEmbed,
 	Action,
 	EventType,
+	Page,
 	AuthType,
-} from '@thoughtspot/embed-sdk';
+} from '@thoughtspot/visual-embed-sdk';
 import './styles.css';
 // Initialize embed configuration
 init({
@@ -16,6 +17,8 @@ init({
 // Instantiate class for embedding a pinboard
 const embed = new AppEmbed('#embed', {
 	frameParams: {},
+	showPrimaryNavbar: true,
+	pageId: Page.Answers,
 });
 embed
 	// Register event listeners
@@ -26,14 +29,10 @@ embed
 			'message received from authInit' + JSON.stringify(payload)
 		)
 	)
-	.render({
-		pageId: 'answers',
-	});
+	.render();
 // Functions to show and hide a loader while iframe loads
 function showLoader() {
-	document.getElementById('loader').style.display = 'block';
 }
 function hideLoader() {
-	document.getElementById('loader').style.display = 'none';
 }
 `;

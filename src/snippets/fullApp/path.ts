@@ -7,7 +7,7 @@ import {
     EmbedEvent,
     AuthType
 } from "@thoughtspot/visual-embed-sdk";
-import "./styles.css";
+import './styles.css';
 // Initialize embed configuration
 init({
     thoughtSpotHost: '<%=tshost%>',
@@ -16,7 +16,8 @@ init({
 // Instantiate class for embedding a pinboard
 const embed = new AppEmbed("#embed", {
     frameParams: {},
-    path:'pinboard/8eb599a5-e6d9-4217-a460-ac9405715a70/'
+	showPrimaryNavbar: true,
+    path:'pinboard/9beaacbf-e65b-4416-b110-238d109c3531/'
 });
 embed
     // Register event listeners
@@ -25,9 +26,7 @@ embed
     .render();
 // Functions to show and hide a loader while iframe loads
 function showLoader() {
-    document.getElementById("loader").style.display = "block";
 }
 function hideLoader() {
-    document.getElementById("loader").style.display = "none";
 }
 `;
